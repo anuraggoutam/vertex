@@ -72,29 +72,32 @@ const Team: React.FC = () => {
   );
 
   return (
-    <div className="team-section mb-16">
-      <div className="container flex justify-center mx-auto pt-16">
-        <div>
-          <p className="subtitle text-lg text-center font-normal pb-3">
-            BUILDING TEAM
-          </p>
-          <h1 className="title xl:text-4xl text-3xl text-center font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
-            The Talented People Behind the Scenes of the Organization
-          </h1>
+    // Team section starts here
+    <section id="team">
+      <div className="team-section mb-16">
+        <div className="container flex justify-center mx-auto pt-16">
+          <div>
+            <p className="subtitle text-lg text-center font-normal pb-3">
+              BUILDING TEAM
+            </p>
+            <h1 className="title xl:text-4xl text-3xl text-center font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+              The Talented People Behind the Scenes of the Organization
+            </h1>
+          </div>
         </div>
-      </div>
-      <div className="background w-full px-10 pt-10">
-        <div className="container mx-auto">
-          <div
-            role="list"
-            aria-label="Behind the scenes People"
-            className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
-          >
-            {teamMembers.map(renderTeamMember)}
+        <div className="background w-full px-10 pt-10">
+          <div className="container mx-auto">
+            <div
+              role="list"
+              aria-label="Behind the scenes People"
+              className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
+            >
+              {teamMembers.map(renderTeamMember)}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

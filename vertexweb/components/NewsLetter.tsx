@@ -1,13 +1,31 @@
 "use client";
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 
 const NewsLetter: React.FC = () => {
   const [email, setEmail] = useState<string>("");
 
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    // Add your form submission logic here
-    console.log("Email submitted:", email);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      // Add your form submission logic here
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+      setEmail("");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -32,11 +50,11 @@ const NewsLetter: React.FC = () => {
             name="email"
             type="email"
             autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"

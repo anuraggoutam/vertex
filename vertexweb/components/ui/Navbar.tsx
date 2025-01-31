@@ -2,6 +2,7 @@
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
+import { TbTools } from "react-icons/tb";
 import { useState, FC } from "react";
 
 const Navbar: FC = () => {
@@ -14,8 +15,8 @@ const Navbar: FC = () => {
          sm:p-2 sm:gap-4 pointer-events-auto"
       >
         <a
-          href="#home"
-          onClick={() => setActiveNav("#home")}
+          href="#hero"
+          onClick={() => setActiveNav("#hero")}
           className={
             activeNav === "#home"
               ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
@@ -36,15 +37,15 @@ const Navbar: FC = () => {
           <AiOutlineUser />
         </a>
         <a
-          href="#experiance"
-          onClick={() => setActiveNav("#experiance")}
+          href="#testimonials"
+          onClick={() => setActiveNav("#testimonials")}
           className={
-            activeNav === "#experiance"
+            activeNav === "#testimonials"
               ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
               : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
           }
         >
-          <BiBook />
+          <RiServiceLine />
         </a>
         <a
           href="#services"
@@ -55,7 +56,7 @@ const Navbar: FC = () => {
               : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
           }
         >
-          <RiServiceLine />
+          <TbTools />
         </a>
         <a
           href="#contact"
