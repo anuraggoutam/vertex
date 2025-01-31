@@ -1,19 +1,26 @@
-import Image from "next/image";
-import SEO from "./components/SEO";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import NewsLetter from "@/components/NewsLetter";
+import Services from "@/components/Services";
+import Team from "@/components/Team";
+import Testimonilas from "@/components/Testimonials";
+import Navbar from "@/components/ui/Navbar";
 
 export default function Home() {
   return (
-    <>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-      </main>
-    </>
+    <main>
+      <div className="h-full w-full">
+        <Hero />
+        <Navbar />
+        {/* Add your content here */}
+        <Testimonilas />
+        <CTA />
+        <Team />
+        <Services />
+        <NewsLetter />
+        <Footer />
+      </div>
+    </main>
   );
 }
