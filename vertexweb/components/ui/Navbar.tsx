@@ -2,70 +2,45 @@
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { TbTools } from "react-icons/tb";
 import { useState, FC } from "react";
 
 const Navbar: FC = () => {
   const [activeNav, setActiveNav] = useState<string | null>(null);
   return (
-    <section id="Navbar" className=" ">
-      <nav
-        className="bg-gradient-to-r from-gray-900/40 via-gray-800/40 to-gray-900/40 max-w-max p-4 z-50 flex left-1/2 
-         bottom-6 gap-8 rounded-[50px] BCD -translate-x-1/2 fixed shadow-lg transition-all duration-300
-         sm:p-2 sm:gap-4 pointer-events-auto"
-      >
+    <section id="Navbar">
+      <nav className="p-6 flex gap-4 fixed bottom-6 left-1/2 transform -translate-x-1/2">
         <a
-          href="#hero"
-          onClick={() => setActiveNav("#hero")}
-          className={
-            activeNav === "#home"
-              ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-              : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-          }
+          href="#home"
+          onClick={() => setActiveNav("#home")}
+          className={activeNav === "#home" ? "active" : ""}
         >
           <AiOutlineHome />
         </a>
         <a
           href="#about"
           onClick={() => setActiveNav("#about")}
-          className={
-            activeNav === "#about"
-              ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-              : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-          }
+          className={activeNav === "#about" ? "active" : ""}
         >
           <AiOutlineUser />
         </a>
         <a
-          href="#testimonials"
-          onClick={() => setActiveNav("#testimonials")}
-          className={
-            activeNav === "#testimonials"
-              ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-              : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-          }
+          href="#experiance"
+          onClick={() => setActiveNav("#experiance")}
+          className={activeNav === "#experiance" ? "active" : ""}
         >
-          <RiServiceLine />
+          <BiBook />
         </a>
         <a
           href="#services"
           onClick={() => setActiveNav("#services")}
-          className={
-            activeNav === "#services"
-              ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-              : "bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-          }
+          className={activeNav === "#services" ? "active" : ""}
         >
-          <TbTools />
+          <RiServiceLine />
         </a>
         <a
           href="#contact"
           onClick={() => setActiveNav("#contact")}
-          className={
-            activeNav === "#contact"
-              ? "active bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-              : " bg-transparent p-2 rounded-[50px] flex text-light text-lg hover:bg-nav transition-all duration-300 sm:text-base"
-          }
+          className={activeNav === "#contact" ? "active" : ""}
         >
           <BiMessageSquareDetail />
         </a>

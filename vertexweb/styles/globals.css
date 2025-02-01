@@ -227,3 +227,47 @@ ball:nth-child(1) {
     scale: 0.3;
   }
 }
+
+/* global error component */
+.global-error-body {
+  background-color: #101010;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-error-container {
+  text-align: center;
+}
+
+.global-error-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.global-error-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.global-error-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #6a0dad;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.global-error-button:hover {
+  background-color: #7b1fa2;
+}
+
+.global-error-separator {
+  color: #ffffff;
+}
