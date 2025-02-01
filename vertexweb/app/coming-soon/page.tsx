@@ -94,7 +94,7 @@ const Page: React.FC = () => {
                   </div>
                 </div>
                 <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-                  VertexWeb
+                  <Link href="/">. VertexWeb</Link>
                 </span>
               </div>
               <div className="flex items-center gap-6">

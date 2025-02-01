@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-
+import { IoShareSocialOutline } from "react-icons/io5";
+import { TiSocialFacebook } from "react-icons/ti";
+import { FaWhatsapp } from "react-icons/fa6";
+import { SlSocialInstagram } from "react-icons/sl";
+import { FaXTwitter } from "react-icons/fa6";
 const CTA: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -71,29 +75,26 @@ const CTA: React.FC = () => {
                 <ul className="mb-6 md:mb-0">
                   <li className="flex mb-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6"
-                      >
-                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                      </svg>
+                      <IoShareSocialOutline />
                     </div>
                     <div className="ml-4">
                       <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                        Our Address
+                        Connect with Us
                       </h3>
-                      <p className="text-gray-300">
-                        1230 Maecenas Street Donec Road
-                      </p>
+                      <div className="social">
+                        <span>
+                          <TiSocialFacebook />
+                        </span>
+                        <span>
+                          <SlSocialInstagram />
+                        </span>
+                        <span>
+                          <FaWhatsapp />
+                        </span>
+                        <span>
+                          <FaXTwitter />
+                        </span>
+                      </div>
                       <p className="text-gray-300">New York, EEUU</p>
                     </div>
                   </li>

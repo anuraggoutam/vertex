@@ -28,7 +28,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero">
+    <section id="home">
       <div className="min-h-screen w-full overflow-hidden bg-black">
         {/* Gradient Orbs */}
         <motion.div
@@ -198,34 +198,6 @@ const Hero = () => {
               )}
             </motion.div>
           </div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            animate={{
-              y: [0, 10, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </motion.div>
         </section>
       </div>
     </section>

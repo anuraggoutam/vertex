@@ -1,27 +1,20 @@
 import React from "react";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-
+import img from "/";
 const teamMembers = [
   {
-    name: "Andres Berlin",
-    role: "Chief Executive Officer",
+    name: "Anurag Gautam",
+    role: "Founder / Full-Stack Developer",
     description:
-      "The CEO's role in raising a company's corporate IQ is to establish an atmosphere that promotes knowledge sharing and collaboration.",
-    image: "https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif",
+      "Anurag brings a vision for innovation, leading the team in creating cutting-edge web solutions and ensuring seamless integration of both front-end and back-end technologies.",
+    image: "/images/anurag.jpg",
   },
   {
-    name: "Silene Tokyo",
-    role: "Product Design Head",
+    name: "Anjali Pundhir",
+    role: "Project Manager / UI/UX Designer",
     description:
-      "The emphasis on innovation and technology in our companies has resulted in a few of them establishing global benchmarks in product design and development.",
-    image: "https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif",
-  },
-  {
-    name: "Johnson Stone",
-    role: "Manager Development",
-    description:
-      "Our services encompass the assessment and repair of property damage caused by water, fire, smoke, or mold. We can also be a part of the restoration.",
-    image: "https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif",
+      "Anjali excels in creating intuitive and visually appealing designs, managing project timelines, and ensuring that the team delivers high-quality, user-centered solutions.",
+    image: "/images/anjli.jpg",
   },
 ];
 
@@ -32,7 +25,7 @@ const Team: React.FC = () => {
       role="listitem"
       className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
     >
-      <div className="card rounded overflow-hidden shadow-md">
+      <div className="card rounded overflow-hidden shadow-md ">
         <div className="absolute -mt-20 w-full flex justify-center">
           <div className="h-32 w-32">
             <img
@@ -90,7 +83,7 @@ const Team: React.FC = () => {
             <div
               role="list"
               aria-label="Behind the scenes People"
-              className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around"
+              className="lg:flex md:flex sm:flex items-center xl:justify-center flex-wrap md:justify-around sm:justify-around lg:justify-around"
             >
               {teamMembers.map(renderTeamMember)}
             </div>
