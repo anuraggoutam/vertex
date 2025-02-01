@@ -4,46 +4,37 @@ import React from "react";
 interface Testimonial {
   text: string;
   name: string;
-  position: string;
   image: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    text: "Share a testimonial that hits some of your benefits from one of your popular customers.",
+    text: "Fantastic team! They revamped our site, and our leads shot up by 60%.",
     name: "Sarah Steiner",
-    position: "VP Sales at Google",
+
     image:
       "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    text: "Make sure you only pick the right sentence to keep it short and simple.",
+    text: "Sleek design, fast load times, and great support. Highly recommend!",
     name: "Dylan Ambrose",
-    position: "Lead marketer at Netflix",
+
     image:
       "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    text: "This is an awesome landing page template I've seen. I would use this for anything.",
-    name: "Gabrielle Winn",
-    position: "Co-founder of Acme Inc",
+    text: "Creative, professional, and results-driven. Our website looks amazing!",
+    name: "Lisa Carter",
     image:
       "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
-const TestimonialCard: React.FC<Testimonial> = ({
-  text,
-  name,
-  position,
-  image,
-}) => (
+const TestimonialCard: React.FC<Testimonial> = ({ text, name, image }) => (
   <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl md:px-14 md:py-14">
     <p className="text-2xl leading-normal text-gray-300">
       {text.split(" ").map((word, index) =>
-        word === "testimonial" ||
-        word === "right sentence" ||
-        word === "awesome" ? (
+        word === "Fantastic" || word === "great" || word === "amazing!" ? (
           <mark
             key={index}
             className="mx-1 text-purple-800 bg-purple-100 rounded-md ring-purple-100 ring-4 dark:ring-purple-900 dark:bg-purple-900 dark:text-purple-200"
@@ -69,7 +60,6 @@ const TestimonialCard: React.FC<Testimonial> = ({
       </div>
       <div>
         <div className="text-lg font-medium text-gray-200">{name}</div>
-        <div className="text-gray-400">{position}</div>
       </div>
     </div>
   </div>

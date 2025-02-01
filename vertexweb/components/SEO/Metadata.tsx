@@ -22,7 +22,7 @@ const SOCIAL_MEDIA = {
 const DEFAULT_METADATA: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: {
-    default: `${SITE_NAME} | Custom Websites & SEO Services`,
+    default: `${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
@@ -74,7 +74,7 @@ const DEFAULT_METADATA: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/banner.jpg",
         width: 1200,
         height: 630,
         alt: "Vertex Web Solutions - Web Development Agency",
