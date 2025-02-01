@@ -27,6 +27,12 @@ const DEFAULT_METADATA: Metadata = {
   },
   description:
     "We build high-performance, SEO-friendly websites to help businesses grow. Expert web development, UI/UX design, and e-commerce solutions for businesses of all sizes.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   keywords: [
     "web development agency",
     "SEO web design",

@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 
 const Footer = () => {
@@ -48,22 +49,27 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
+                <Link
+                  href="#about"
+                  className="hover:text-primary transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
+                <Link
+                  href="#team"
+                  className="hover:text-primary transition-colors"
+                >
                   Our Team
                 </Link>
               </li>
+
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
+                <Link
+                  href="#contact"
+                  className="hover:text-primary transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -72,11 +78,38 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
-                (Icon, index) => (
+              {/* Social Icons */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="mt-2 flex justify-center items-center space-x-6"
+              >
+                {[
+                  {
+                    Icon: FaFacebookF,
+                    link: "https://www.facebook.com/YOUR_USERNAME",
+                  },
+                  {
+                    Icon: FaXTwitter,
+                    link: "https://twitter.com/YOUR_USERNAME",
+                  },
+                  {
+                    Icon: FaInstagram,
+                    link: "https://www.instagram.com/YOUR_USERNAME",
+                  },
+                  {
+                    Icon: FaLinkedinIn,
+                    link: "https://www.linkedin.com/in/YOUR_USERNAME",
+                  },
+                  {
+                    Icon: FaWhatsapp,
+                    link: "https://wa.me/YOUR_PHONE_NUMBER",
+                  }, // Use your country code
+                ].map(({ Icon, link }, index) => (
                   <motion.a
                     key={index}
-                    href="#"
+                    href={link}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, rotate: 5 }}
@@ -85,8 +118,8 @@ const Footer = () => {
                   >
                     <Icon className="w-6 h-6" />
                   </motion.a>
-                )
-              )}
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>

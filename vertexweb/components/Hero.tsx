@@ -1,12 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Button from "./ui/Button";
 
 const Hero = () => {
@@ -181,21 +177,36 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-12 flex justify-center items-center space-x-6"
             >
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
-                (Icon, index) => (
-                  <motion.a
-                    key={index}
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="text-white hover:text-primary transition-colors"
-                  >
-                    <Icon className="w-6 h-6" />
-                  </motion.a>
-                )
-              )}
+              {[
+                {
+                  Icon: FaFacebookF,
+                  link: "https://www.facebook.com/profile.php?id=61572442240215",
+                },
+                {
+                  Icon: FaXTwitter,
+                  link: "https://x.com/vertexweb_",
+                },
+                {
+                  Icon: FaInstagram,
+                  link: "https://www.instagram.com/vertexweb_/",
+                },
+                {
+                  Icon: FaLinkedinIn,
+                  link: "https://www.linkedin.com/in/anurag-gautam-52b899218/",
+                },
+              ].map(({ Icon, link }, index) => (
+                <motion.a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="text-white hover:text-primary transition-colors"
+                >
+                  <Icon className="w-6 h-6" />
+                </motion.a>
+              ))}
             </motion.div>
           </div>
         </section>

@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   try {
     // Send a confirmation email via Resend
     const response = await resend.emails.send({
-      from: "Your Website <onboarding@resend.dev>",
+      from: "VertexWeb<onboarding@resend.dev>",
       to: email,
       subject: "Welcome to our Newsletter!",
       html: `<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">

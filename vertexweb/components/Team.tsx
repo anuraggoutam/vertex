@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import img from "/";
+
 const teamMembers = [
   {
     name: "Anurag Gautam",
@@ -8,6 +9,10 @@ const teamMembers = [
     description:
       "Anurag brings a vision for innovation, leading the team in creating cutting-edge web solutions and ensuring seamless integration of both front-end and back-end technologies.",
     image: "/images/anurag.jpg",
+    github: "https://github.com/anuraggoutam",
+    x: "https://x.com/AnuragGaut39640",
+    instagram:
+      "https://www.instagram.com/anurag_____.007?igsh=NWtnbm54Mmt5aWI=",
   },
   {
     name: "Anjali Pundhir",
@@ -15,6 +20,10 @@ const teamMembers = [
     description:
       "Anjali excels in creating intuitive and visually appealing designs, managing project timelines, and ensuring that the team delivers high-quality, user-centered solutions.",
     image: "/images/anjli.jpg",
+    github: "https://github.com/innersage",
+    x: "https://x.com/Anjii008?t=NLXVX37dDczVDN3DM9usGQ&s=08",
+    instagram:
+      "https://www.instagram.com/anjii.thakur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
 ];
 
@@ -43,21 +52,39 @@ const Team: React.FC = () => {
             {member.description}
           </p>
           <div className="w-full flex justify-center pt-5 pb-5">
-            <a href="javascript:void(0)" className="mx-5">
-              <div aria-label="Github" role="img">
-                <FaGithub className="text-gray-600" />
-              </div>
-            </a>
-            <a href="javascript:void(0)" className="mx-5">
-              <div aria-label="Twitter" role="img">
-                <FaTwitter className="text-gray-600" />
-              </div>
-            </a>
-            <a href="javascript:void(0)" className="mx-5">
-              <div aria-label="Instagram" role="img">
-                <FaInstagram className="text-gray-600" />
-              </div>
-            </a>
+            {member.github && (
+              <a
+                href={member.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github"
+                className="mx-5"
+              >
+                <FaGithub className="text-gray-600 hover:text-white transition-colors" />
+              </a>
+            )}
+            {member.x && (
+              <a
+                href={member.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="mx-5"
+              >
+                <FaTwitter className="text-gray-600 hover:text-blue-500 transition-colors" />
+              </a>
+            )}
+            {member.instagram && (
+              <a
+                href={member.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="mx-5"
+              >
+                <FaInstagram className="text-gray-600 hover:text-pink-500 transition-colors" />
+              </a>
+            )}
           </div>
         </div>
       </div>

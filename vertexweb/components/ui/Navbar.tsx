@@ -5,7 +5,7 @@ import { RiServiceLine } from "react-icons/ri";
 import { useState, FC } from "react";
 
 const Navbar: FC = () => {
-  const [activeNav, setActiveNav] = useState<string | null>(null);
+  const [activeNav, setActiveNav] = useState<string | null>("#home");
   return (
     <section id="Navbar">
       <nav className="p-2 bottom-8 gap-4 -translate-x-1/2 fixed bg-white/20 backdrop-blur-md rounded-full shadow-lg max-w-max z-[50] flex left-1/2 smx:bottom-16">

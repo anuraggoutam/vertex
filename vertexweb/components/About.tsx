@@ -31,7 +31,7 @@ const About: React.FC = () => {
             <div className="w-64 h-64 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-3xl opacity-50"></div>
           </div>
           <div className="relative z-10 image object-center text-center">
-            <img src="https://i.imgur.com/WbQnbas.png" alt="About Us" />
+            <img src="/images/web.png" alt="About Us" />
           </div>
         </div>
       </div>

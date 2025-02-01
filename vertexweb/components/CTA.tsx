@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { IoShareSocialOutline } from "react-icons/io5";
-import { TiSocialFacebook } from "react-icons/ti";
-import { FaWhatsapp } from "react-icons/fa6";
-import { SlSocialInstagram } from "react-icons/sl";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 const CTA: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -81,21 +86,48 @@ const CTA: React.FC = () => {
                       <h3 className="mb-2 text-lg font-medium leading-6 text-white">
                         Connect with Us
                       </h3>
-                      <div className="social">
-                        <span>
-                          <TiSocialFacebook />
-                        </span>
-                        <span>
-                          <SlSocialInstagram />
-                        </span>
-                        <span>
-                          <FaWhatsapp />
-                        </span>
-                        <span>
-                          <FaXTwitter />
-                        </span>
-                      </div>
-                      <p className="text-gray-300">New York, EEUU</p>
+                      {/* Social Icons */}
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        className="mt-2 flex justify-center items-center space-x-6"
+                      >
+                        {[
+                          {
+                            Icon: FaFacebookF,
+                            link: "https://www.facebook.com/profile.php?id=61572442240215",
+                          },
+                          {
+                            Icon: FaXTwitter,
+                            link: "https://x.com/vertexweb_",
+                          },
+                          {
+                            Icon: FaInstagram,
+                            link: "https://www.instagram.com/vertexweb_/",
+                          },
+                          {
+                            Icon: FaLinkedinIn,
+                            link: "https://www.linkedin.com/in/anurag-gautam-52b899218/",
+                          },
+                          {
+                            Icon: FaWhatsapp,
+                            link: "https://api.whatsapp.com/send?phone=+917303372170",
+                          }, // Use your country code
+                        ].map(({ Icon, link }, index) => (
+                          <motion.a
+                            key={index}
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2, rotate: 5 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="text-white hover:text-primary transition-colors"
+                          >
+                            <Icon className="w-6 h-6" />
+                          </motion.a>
+                        ))}
+                      </motion.div>
                     </div>
                   </li>
                   <li className="flex mb-4">
@@ -121,8 +153,10 @@ const CTA: React.FC = () => {
                       <h3 className="mb-2 text-lg font-medium leading-6 text-white">
                         Contact
                       </h3>
-                      <p className="text-gray-300">Mobile: +1 (123) 456-7890</p>
-                      <p className="text-gray-300">Mail: tailnext@gmail.com</p>
+                      <p className="text-gray-300">Mobile: +91 7303372170</p>
+                      <p className="text-gray-300">
+                        GMail: vertexwebstore@gmail.com
+                      </p>
                     </div>
                   </li>
                   <li className="flex mb-4">
@@ -148,10 +182,10 @@ const CTA: React.FC = () => {
                         Working hours
                       </h3>
                       <p className="text-gray-300">
-                        Monday - Friday: 08:00 - 17:00
+                        Monday - Friday: 10:00 AM - 08:00 PM
                       </p>
                       <p className="text-gray-300">
-                        Saturday &amp; Sunday: 08:00 - 12:00
+                        Saturday &amp; Sunday: 10:00 AM - 05:00 PM
                       </p>
                     </div>
                   </li>

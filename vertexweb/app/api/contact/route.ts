@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const response = await resend.emails.send({
-      from: "Your Website <onboarding@resend.dev>",
+      from: "VertexWeb<onboarding@resend.dev>",
       to: "anuraggoutam01@gmail.com",
       subject: "New Contact Form Submission",
       html: `
